@@ -1,6 +1,6 @@
 name: Display repository size
 
-on: [push]
+on: [push | pull_request]
 
 
 jobs:
