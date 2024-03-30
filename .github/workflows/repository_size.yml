@@ -1,0 +1,13 @@
+name: Display repository size
+
+on: [push | pull_request]
+
+
+jobs:
+  Get-Repository-Size
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: 
+          echo ${{ GITHUB_BASE_REF }}
+          du -skh --exclude=".git"
